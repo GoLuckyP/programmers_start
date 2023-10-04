@@ -1,5 +1,3 @@
-// 에라토스테네스의 체 알고리즘을 이용
-
 class Solution {
     public int solution(int n) {
         int count = 0; // 약수의 개수를 세는 변수
@@ -23,7 +21,19 @@ class Solution {
         return answer;
     }
 }
-/*
+
+/* 이중 Stream
+import java.util.stream.IntStream;
+
+class Solution {
+    public int solution(int n) {
+        return (int) IntStream.rangeClosed(1, n).filter(i -> (int) IntStream.rangeClosed(1, i).filter(i2 -> i % i2 == 0).count() > 2).count();
+    }
+}
+*/
+
+
+/* // 에라토스테네스의 체 알고리즘을 이용
 class Solution {
     public int solution(int n) {
         boolean[] isComposite = new boolean[n + 1]; // 인덱스 0은 사용하지 않음
