@@ -1,4 +1,4 @@
-/*구슬을 나누는 경우의 수*/
+/*구슬을 나누는 경우의 수 7점*/
 import java.math.BigInteger;
 class Solution {
     public int solution(int balls, int share) {
